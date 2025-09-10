@@ -1,11 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
 func main() {
-	var str string
-
-	fmt.Scan(&str)
+	reader := bufio.NewReader(os.Stdin)
+	str, _ := reader.ReadString('\n')
+	str = strings.TrimSpace(str)
 
 	s := []rune(str)
 
